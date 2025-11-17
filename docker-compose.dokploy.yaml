@@ -4,8 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
       target: bolt-ai-production
-    ports:
-      - '8080:5173'  # Changed to 8080
+    # Remove the ports line entirely - Dokploy will handle port mapping
     environment:
       - NODE_ENV=production
       - PORT=5173
